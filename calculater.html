@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <link rel="stylesheet" href="calculator.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <div class="calculator_body">
+      <!-- Screen -->
+      <div id="screen">
+        <div id="history">
+          <p id="history-value"></p>
+        </div>
+      <!-- <div id="operationSymbol"></div> -->
+        <div id="output">
+          <p id="output-value"></p>
+        </div>
+      </div>
+      <!-- Extra Operations -->
+      <div class="extra_operations">
+        <button id="pExtra1" onclick="takePercent()">%</button>
+        <p>Simple <br> Caclulator</p>
+        <button id="buttonClear" onclick="clearOutput()">C</button>
+      </div>
+      <!-- Digits -->
+      <div class="button_digits">
+        <button class="buttonDigits" id="7" onclick="insert(7)">7</button>
+        <button class="buttonDigits" id="8" onclick="insert(8)">8</button>
+        <button class="buttonDigits" id="9" onclick="insert(9)">9</button>
+        <button class="buttonDigits" id="4" onclick="insert(4)">4</button>
+        <button class="buttonDigits" id="5" onclick="insert(5)">5</button>
+        <button class="buttonDigits" id="6" onclick="insert(6)">6</button>
+        <button class="buttonDigits" id="1" onclick="insert(1)">1</button>
+        <button class="buttonDigits" id="2" onclick="insert(2)">2</button>
+        <button class="buttonDigits" id="3" onclick="insert(3)">3</button>
+        <button class="buttonDigits" id="0" onclick="insert(0)">0</button>
+        <button id="buttonDot" onclick="insert('.')">.</button>
+      </div>
+      <!-- Real Operations -->
+      <div class="operations">
+        <button class="buttonOperator" onclick="giveToHistory(this.id)" id="*">&times;</button>
+        <button class="buttonOperator" onclick="giveToHistory(this.id)" id="/">/</button>
+        <button class="buttonOperator" onclick="giveToHistory(this.id)" id="-">-</button>
+        <button class="buttonOperator" onclick="giveToHistory(this.id)" id="+">+</button>
+        <button class="buttonOperator" id="=" onclick="operate()">=</button>
+      </div>
+    </div>
+    <script src="calculator.js"></script>
+  </body>
+</html>
